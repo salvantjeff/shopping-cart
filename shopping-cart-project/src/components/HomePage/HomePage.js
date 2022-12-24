@@ -1,5 +1,5 @@
 import './HomePage.css';
-
+import { BsChevronRight } from 'react-icons/bs'
 function HomePage() {
     return (
         <div>
@@ -8,7 +8,7 @@ function HomePage() {
                 <h3 className="sub-headline">World champion</h3>
                 <div className="cta-link">
                     <a href="/">Shop now</a>
-                    <div>icon</div>
+                    <div className='shop-now-icon'><BsChevronRight /></div>
                 </div>
             </div>
             <div className="unit-image-wrapper">

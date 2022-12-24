@@ -33,6 +33,7 @@
     /* color: rgb(2, 234, 255); */
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .cta-link {
@@ -41,8 +42,16 @@
     border-radius: 1rem;
     padding: 1rem;
     margin: auto;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    text-transform: uppercase;
 }
 
 .cta-link:hover {
     background-color: rgba(2, 234, 255, 1);
+}
+
+.shop-now-icon {
+    font-size: 1rem;
 }
