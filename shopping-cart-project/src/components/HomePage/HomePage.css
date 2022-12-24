@@ -33,7 +33,6 @@
     /* color: rgb(2, 234, 255); */
     color: white;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .cta-link {
@@ -46,6 +45,7 @@
     gap: .5rem;
     align-items: center;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .cta-link:hover {
