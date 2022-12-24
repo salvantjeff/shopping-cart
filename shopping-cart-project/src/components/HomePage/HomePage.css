@@ -1,0 +1,48 @@
+.unit-copy-wrapper {
+    position: relative;
+    text-align: center;
+    color: white;
+    flex-grow: 0;
+    z-index: 4;
+    display: grid;
+    gap: .5rem;
+}
+
+.unit-image-wrapper {
+    flex-grow: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.unit-image {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.3)),
+        url("../../img/messi-world-cup.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.cta-link>a {
+    /* color: rgb(2, 234, 255); */
+    color: white;
+    text-decoration: none;
+}
+
+.cta-link {
+    background-color: rgba(2, 234, 255, .6);
+    width: max-content;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+.cta-link:hover {
+    background-color: rgba(2, 234, 255, 1);
+}
