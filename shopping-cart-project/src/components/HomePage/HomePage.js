@@ -1,3 +1,5 @@
+import messiHero from '../../img/messi-world-cup.jpeg';
+
 function HomePage() {
     return (
         <div>
@@ -11,7 +13,7 @@ function HomePage() {
             </div>
             <div className="unit-image-wrapper">
                 <figure className="unit-image">
-                    
+                    <img src={messiHero} alt="messi holding world cup"/>
                 </figure>
             </div>
         </div>
