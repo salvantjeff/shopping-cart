@@ -1,0 +1,12 @@
+nav {
+    background-color: white;
+}
+
+.nav-bar {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-bar>li {
+    list-style: none;
+}

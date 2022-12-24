@@ -1,6 +1,7 @@
 import './HomePage.css';
 import { BsChevronRight } from 'react-icons/bs'
-function HomePage() {
+
+function HomePage({ navHeight }) {
     return (
         <div>
             <div className="unit-copy-wrapper">
@@ -11,7 +12,12 @@ function HomePage() {
                     <div className='shop-now-icon'><BsChevronRight /></div>
                 </div>
             </div>
-            <div className="unit-image-wrapper">
+            <div 
+                className="unit-image-wrapper"
+                style={{
+                    top: navHeight
+                }}
+            >
                 <figure className="unit-image"></figure>
             </div>
         </div>
