@@ -1,8 +1,11 @@
 import './NavBar.css';
 
-function NavBar() {
+function NavBar({ navHeight }) {
     return (
-        <nav className='nav-section'>
+        <nav 
+            className='nav-section'
+            style={{top: `${-navHeight}px`}}
+        >
             <ul className='nav-bar'>
                 <li>menu</li>
                 <li>M</li>

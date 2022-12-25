@@ -9,12 +9,11 @@ function App() {
     const nav = document.querySelector('nav');
     setNavHeight(nav.offsetHeight);
   }, []);
-
-  console.log(navHeight);
+  
   return (
-    <div className="module-content">
-      <div className='unit-wrapper'>
-        <NavBar />
+    <div className="module-content" >
+      <div className='unit-wrapper' style={{marginTop: `${navHeight}px`}} >
+        <NavBar navHeight={navHeight}/>
         <HomePage navHeight={navHeight}/>
       </div>
     </div>
