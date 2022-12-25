@@ -11,9 +11,22 @@ nav {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav-bar>li {
     list-style: none;
+}
+
+.nav-bar.inner {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.logo {
+    position: absolute;
+    top: 25%;
+    left: 50%;
 }

@@ -1,4 +1,7 @@
 import './NavBar.css';
+import { BsSearch } from 'react-icons/bs';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { GrShop } from 'react-icons/gr';
 
 function NavBar({ navHeight }) {
     return (
@@ -7,10 +10,12 @@ function NavBar({ navHeight }) {
             style={{top: `${-navHeight}px`}}
         >
             <ul className='nav-bar'>
-                <li>menu</li>
-                <li>M</li>
-                <li>search</li>
-                <li>Bag</li>
+                <li><AiOutlineMenu /></li>
+                <li className='logo'>M</li>
+                <ul className='nav-bar inner'>
+                    <li><BsSearch /></li>
+                    <li><GrShop /></li>
+                </ul>
             </ul>
         </nav>
     );
