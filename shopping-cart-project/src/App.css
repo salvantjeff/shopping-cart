@@ -21,3 +21,10 @@
 body {
   font-family: 'Roboto Mono', monospace;
 }
+
+.page-contents {
+  position: relative;
+  background-color: rgb(147, 192, 127);
+  width: 100%;
+  height: 100%;
+}

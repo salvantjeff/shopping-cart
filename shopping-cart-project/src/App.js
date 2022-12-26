@@ -1,7 +1,7 @@
+import { useState, useEffect } from 'react';
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
 import NavBar from './components/NavBar/NavBar';
-import { useState, useEffect } from 'react';
 import Menu from './components/Menu/Menu';
 import SearchPage from './components/SearchPage/SearchPage';
 import CartPage from './components/CartPage/CartPage';
@@ -15,11 +15,16 @@ function App() {
   }, []);
   
   return (
-    <div className="module-content" >
-      <div className='unit-wrapper' style={{marginTop: `${navHeight}px`}} >
-        <NavBar navHeight={navHeight}/>
-        <HomePage navHeight={navHeight}/>
-        <ShopPage />
+    <div className="module-content">
+      <div className='unit-wrapper'>
+        <NavBar/>
+        <div className='page-contents' style={{marginTop: `${navHeight}px`}}>
+          <HomePage/>
+          {/* <ShopPage /> */}
+          {/* <Menu /> */}
+          {/* <SearchPage /> */}
+          {/* <CartPage /> */}
+        </div>
       </div>
     </div>
   );

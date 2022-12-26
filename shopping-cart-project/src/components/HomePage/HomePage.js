@@ -1,13 +1,10 @@
 import './HomePage.css';
 import { BsChevronRight } from 'react-icons/bs'
 
-function HomePage({ navHeight }) {
+function HomePage() {
     return (
         <div className='home-page'>
-            <div 
-                className="unit-copy-wrapper"
-                style={{top: `${navHeight}px`}}
-            >
+            <div className="unit-copy-wrapper">
                 <h2 className="headline">Messi Apparel</h2>
                 <h3 className="sub-headline">World champion</h3>
                 <div className="cta-link">
