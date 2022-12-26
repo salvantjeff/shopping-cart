@@ -30,3 +30,7 @@ nav {
     top: 25%;
     left: 50%;
 }
+
+.nav-button {
+    cursor: pointer;
+}

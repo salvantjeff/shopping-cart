@@ -10,11 +10,11 @@ function NavBar({ navHeight }) {
             style={{top: `${-navHeight}px`}}
         >
             <ul className='nav-bar'>
-                <li><AiOutlineMenu /></li>
-                <li className='logo'>M</li>
+                <li className='nav-button'><AiOutlineMenu /></li>
+                <li className='logo nav-button'>M</li>
                 <ul className='nav-bar inner'>
-                    <li><BsSearch /></li>
-                    <li><GrShop /></li>
+                    <li className='nav-button'><BsSearch /></li>
+                    <li className='nav-button'><GrShop /></li>
                 </ul>
             </ul>
         </nav>

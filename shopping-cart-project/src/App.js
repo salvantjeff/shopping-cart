@@ -18,7 +18,6 @@ function App() {
       <div className='unit-wrapper' style={{marginTop: `${navHeight}px`}} >
         <NavBar navHeight={navHeight}/>
         <HomePage navHeight={navHeight}/>
-        <CartPage />
       </div>
     </div>
   );
