@@ -2,6 +2,7 @@ import './App.css';
 import HomePage from './components/HomePage/HomePage';
 import NavBar from './components/NavBar/NavBar';
 import { useState, useEffect } from 'react';
+import Menu from './components/Menu/Menu';
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
