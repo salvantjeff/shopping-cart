@@ -38,3 +38,27 @@
     height: 100%;
     width: 100%;
 }
+
+@media (min-width: 500px) {
+    .shop-page-wrapper {
+        display: grid;
+        grid-template-columns: .5fr 2fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .shop-header {
+        grid-column: 1 / span 2;
+        grid-row: 1 / 2;
+    }
+
+    .product-cards {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .shop-categories {
+        flex-direction: column;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
