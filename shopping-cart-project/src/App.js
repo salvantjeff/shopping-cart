@@ -6,6 +6,7 @@ import Menu from './components/Menu/Menu';
 import SearchPage from './components/SearchPage/SearchPage';
 import CartPage from './components/CartPage/CartPage';
 import ShopPage from './components/ShopPage/ShopPage';
+import ProductDetail from './components/ProductDetail/ProductDetail';
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
@@ -19,11 +20,12 @@ function App() {
       <div className='unit-wrapper'>
         <NavBar/>
         <div className='page-contents' style={{marginTop: `${navHeight}px`}}>
-          <HomePage/>
+          {/* <HomePage/> */}
           {/* <ShopPage /> */}
           {/* <Menu /> */}
           {/* <SearchPage /> */}
-          <CartPage />
+          {/* <CartPage /> */}
+          <ProductDetail />
         </div>
       </div>
     </div>
