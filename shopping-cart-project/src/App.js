@@ -7,6 +7,7 @@ import SearchPage from './components/SearchPage/SearchPage';
 import CartPage from './components/CartPage/CartPage';
 import ShopPage from './components/ShopPage/ShopPage';
 import ProductDetail from './components/ProductDetail/ProductDetail';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
