@@ -3,16 +3,9 @@ import ShopProductCard from './ShopProductCard/ShopProductCard';
 import { v4 as uuidv4 } from 'uuid';
 import React, { useState, useEffect } from 'react';
 import winnersHoodie from '../../img/winners-hoodie.webp';
+import AllProductDetails from './AllProductDetails';
 
-const initProductDetails = [
-    {
-        name: 'Argentina 2022 Winners Hoody',
-        category: 'Tops',
-        price: 60.00,
-        imgURL: winnersHoodie,
-        id: uuidv4(),
-    }
-];
+const initProductDetails = AllProductDetails;
 
 function ShopPage() {
 
