@@ -18,6 +18,11 @@ nav {
     list-style: none;
 }
 
+.links {
+    color: #000;
+    text-decoration: none;
+}
+
 .nav-bar.inner {
     padding: 0;
     margin: 0;
