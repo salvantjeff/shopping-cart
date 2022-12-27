@@ -9,7 +9,7 @@ import ShopProductCard from './ShopProductCard/ShopProductCard';
 //         imgURL: '',
 //     }
 // ];
-function ShopPage({ navHeight }) {
+function ShopPage() {
     return (
         <div className='shop-page' >
             <div className='shop-page-wrapper'>
