@@ -1,16 +1,23 @@
 import './ShopPage.css';
 import ShopProductCard from './ShopProductCard/ShopProductCard';
 import { v4 as uuidv4 } from 'uuid';
+import React, { useState, useEffect } from 'react';
+import winnersHoodie from '../../img/winners-hoodie.webp';
 
-// const productDetails = [
-//     {
-//         name: '',
-//         category: '',
-//         price: 0,
-//         imgURL: '',
-//     }
-// ];
+const initProductDetails = [
+    {
+        name: 'Argentina 2022 Winners Hoody',
+        category: 'Tops',
+        price: 60.00,
+        imgURL: winnersHoodie,
+        id: uuidv4(),
+    }
+];
+
 function ShopPage() {
+
+    const [productDetails, setProductDetails] = useState(initProductDetails);
+
     return (
         <div className='shop-page' >
             <div className='shop-page-wrapper'>
@@ -24,10 +31,11 @@ function ShopPage() {
                     <div className='category'>Accessories</div>
                 </div> 
                 <div className='product-cards'>
-                    <ShopProductCard />
-                    <ShopProductCard />
-                    <ShopProductCard />
-                    <ShopProductCard />
+                    {productDetails.map(product => {
+                        return (
+                            <ShopProductCard key={product.id} product={product}/>
+                        );
+                    })}
                 </div>
             </div>
         </div>

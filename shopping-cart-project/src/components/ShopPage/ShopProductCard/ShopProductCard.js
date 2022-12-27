@@ -1,17 +1,15 @@
 import './ShopProductCard.css';
 
-const imgURL = 'https://assets.adidas.com/images/w_303,h_303,f_auto,q_auto,fl_lossy,c_fill,g_auto/1642dcf706704ccab2b3aef500c60724_9366/argentina-game-day-travel-pants.jpg';
-
-function ShopProductCard() {
+function ShopProductCard({ product }) {
     return (
         <div className='product-card'>
             <div className='product-image-container'>
-                <img className='product-image' src={imgURL} alt='product'/>
+                <img className='product-image' src={product.imgURL} alt='product'/>
             </div>
             <div className='product-card__info'>
-                <div className='product-card__name'>Argentina Game Day Travel Pants</div>
-                <div className='product-card__category'>Shoes</div>
-                <div className='product-card__price'>$95.00</div>
+                <div className='product-card__name'>{product.name}</div>
+                <div className='product-card__category'>{product.category}</div>
+                <div className='product-card__price'>${product.price}</div>
             </div>
         </div>
     );
