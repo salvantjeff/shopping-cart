@@ -19,15 +19,19 @@ function App() {
   return (
     <div className="module-content">
       <div className='unit-wrapper'>
-        <NavBar/>
-        <div className='page-contents' style={{marginTop: `${navHeight}px`}}>
-          {/* <HomePage/> */}
-          {/* <ShopPage /> */}
-          {/* <Menu /> */}
-          {/* <SearchPage /> */}
-          {/* <CartPage /> */}
-          <ProductDetail />
-        </div>
+        <Router>
+          <NavBar/>
+          <div className='page-contents' style={{marginTop: `${navHeight}px`}}>
+            <Routes>
+              <Route path='/' element={<HomePage />}/>
+              <Route path='/menu' element={<Menu />}/>
+              <Route path='/search' element={<SearchPage />}/>
+              <Route path='/cart' element={<CartPage />}/>
+              <Route path='/shop' element={<ShopPage />}/>
+              {/* <Route path='/shop/:id' element={<ProductDetail />}/> */}
+            </Routes>
+          </div>
+        </Router>
       </div>
     </div>
   );
