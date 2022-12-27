@@ -1,15 +1,11 @@
 import './ShopPage.css';
 import ShopProductCard from './ShopProductCard/ShopProductCard';
-import { v4 as uuidv4 } from 'uuid';
 import React, { useState, useEffect } from 'react';
-import winnersHoodie from '../../img/winners-hoodie.webp';
 import AllProductDetails from './AllProductDetails';
 
 const initProductDetails = AllProductDetails;
 
 function ShopPage() {
-
-    const [productDetails, setProductDetails] = useState(initProductDetails);
 
     return (
         <div className='shop-page' >
@@ -24,7 +20,7 @@ function ShopPage() {
                     <div className='category'>Accessories</div>
                 </div> 
                 <div className='product-cards'>
-                    {productDetails.map(product => {
+                    {initProductDetails.map(product => {
                         return (
                             <ShopProductCard key={product.id} product={product}/>
                         );
