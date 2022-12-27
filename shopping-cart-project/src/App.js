@@ -23,7 +23,7 @@ function App() {
           {/* <ShopPage /> */}
           {/* <Menu /> */}
           {/* <SearchPage /> */}
-          {/* <CartPage /> */}
+          <CartPage />
         </div>
       </div>
     </div>

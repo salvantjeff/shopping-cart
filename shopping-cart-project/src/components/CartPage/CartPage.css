@@ -52,15 +52,9 @@
 }
 
 .cart-items {
-    list-style: none;
-    padding: 1rem;
     display: grid;
-}
-
-.cart-item {
-    padding: .5rem 0;
-    cursor: pointer;
-    font-weight: 500;
+    gap: .5rem;
+    /* background-color: rgb(172, 152, 218); */
 }
 
 .cart-checkout-footer {
