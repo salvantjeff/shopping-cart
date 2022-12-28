@@ -23,7 +23,10 @@ function SearchPage() {
             <div className="search-wrapper">
                 <div className="search-header">
                     <div className="search-bar">
-                        <div className='search-bar-button'><GrSearch /></div>
+                        <label 
+                            htmlFor='search-bar-button' 
+                            className='search-bar-button'
+                        ><GrSearch /></label>
                         <input 
                             id='search-bar-button'
                             className='search-input' 
