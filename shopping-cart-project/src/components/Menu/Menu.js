@@ -23,7 +23,9 @@ function Menu() {
                     <Link onClick={handleMenuClicked} className='links' to="/shop">
                         <li className='menu-item'>Shop</li>
                     </Link>
-                    <li className='menu-item'>Support</li>
+                    <Link onClick={handleMenuClicked} className='links' to="/support">
+                        <li className='menu-item'>Support</li>
+                    </Link>
                 </ul>
             </div>
         </div>  

@@ -8,6 +8,7 @@ import CartPage from './components/CartPage/CartPage';
 import ShopPage from './components/ShopPage/ShopPage';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SupportPage from './components/SupportPage/SupportPage';
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
@@ -29,6 +30,7 @@ function App() {
               {/* <Route path='/cart' element={<CartPage />}/> */}
               <Route path='/shop' element={<ShopPage />}/>
               <Route path='/shop/:id' element={<ProductDetail />}/>
+              <Route path='/support' element={<SupportPage />}/>
             </Routes>
             <Menu />
           </div>
