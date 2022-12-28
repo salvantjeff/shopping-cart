@@ -8,7 +8,6 @@ function NavBar() {
 
     function handleMenuClicked() {
         document.body.classList.remove('hideMenu');
-        console.log('you want to show menu');
     };
 
     return (

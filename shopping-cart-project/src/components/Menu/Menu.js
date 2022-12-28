@@ -6,7 +6,6 @@ function Menu() {
 
     function handleMenuClicked() {
         document.body.classList.add('hideMenu');
-        console.log('you want to close menu');
     };
 
     return (
