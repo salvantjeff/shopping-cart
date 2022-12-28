@@ -1,10 +1,17 @@
 import './SearchPage.css';
 import { GrClose, GrSearch } from 'react-icons/gr';
+import { useState } from 'react';
 
 function SearchPage() {
-    
+
     function handleSearchClicked() {
         document.body.classList.add('hideSearch');
+    };
+
+    const [searchItem, setSearchItem] = useState('');
+    function handleOnChange(e) {
+        const newSearchItem = e.target.value;
+        setSearchItem(newSearchItem);
     };
 
     return (
@@ -13,7 +20,13 @@ function SearchPage() {
                 <div className="search-header">
                     <div className="search-bar">
                         <div className='search-bar-button'><GrSearch /></div>
-                        <input className='search-input' type="text" />
+                        <input 
+                            className='search-input' 
+                            type="text" 
+                            name='search'
+                            value={searchItem}
+                            onChange={handleOnChange}
+                        />
                         <div className='search-bar-button'><GrClose /></div>
                     </div>
                     <div>
