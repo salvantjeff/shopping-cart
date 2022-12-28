@@ -14,6 +14,10 @@ function SearchPage() {
         setSearchItem(newSearchItem);
     };
 
+    function handleClearSearch() {
+        setSearchItem('');
+    };
+
     return (
         <div className="search-page">
             <div className="search-wrapper">
@@ -21,13 +25,16 @@ function SearchPage() {
                     <div className="search-bar">
                         <div className='search-bar-button'><GrSearch /></div>
                         <input 
+                            id='search-bar-button'
                             className='search-input' 
                             type="text" 
                             name='search'
                             value={searchItem}
                             onChange={handleOnChange}
                         />
-                        <div className='search-bar-button'><GrClose /></div>
+                        <div onClick={handleClearSearch} className='search-bar-button'>
+                            <GrClose />
+                        </div>
                     </div>
                     <div>
                         <button onClick={handleSearchClicked} className='cancel-button'>Cancel</button>
