@@ -7,6 +7,8 @@ function Menu() {
     function handleMenuClicked() {
         document.body.classList.add('hideMenu');
     };
+    
+    document.body.classList.add('hideMenu');
 
     return (
         <div className="menu">

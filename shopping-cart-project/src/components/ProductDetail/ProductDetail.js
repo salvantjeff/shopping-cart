@@ -16,11 +16,17 @@ function ProductDetail() {
             id: id,
         }
     );
+
     useEffect(() => {
         const targetProduct = AllProductDetails.filter((product) => product.id === id);
         setCurrProduct(targetProduct[0]);
     }, []);
 
+    useEffect(() => {
+        const targetProduct = AllProductDetails.filter((product) => product.id === id);
+        setCurrProduct(targetProduct[0]);
+    }, [id]);
+    
     return (
         <div className='product-detail'>
             <div className='product-detail-wrapper'>

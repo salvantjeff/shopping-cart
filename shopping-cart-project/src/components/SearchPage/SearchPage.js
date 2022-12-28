@@ -2,13 +2,16 @@ import './SearchPage.css';
 import { GrClose, GrSearch } from 'react-icons/gr';
 import { useState } from 'react';
 import { AllProductDetails } from '../ShopPage/AllProductDetails';
+import { Link } from 'react-router-dom';
 
 function SearchPage() {
-    const popularItems = {
+
+    const [popularItems, setPopularItems] = useState({
         item1: AllProductDetails[0],
         item2: AllProductDetails[1],
         item3: AllProductDetails[2],
-    };
+    });
+
     function handleSearchClicked() {
         document.body.classList.add('hideSearch');
     };
@@ -23,6 +26,7 @@ function SearchPage() {
         setSearchItem('');
     };
 
+    document.body.classList.add('hideSearch');
     return (
         <div className="search-page">
             <div className="search-wrapper">
@@ -51,9 +55,15 @@ function SearchPage() {
                 <div className='search-content'>
                     <ul className="popular-items">
                         <p className='popular-heading'>Popular items</p>
-                        <li className='popular-item'>{popularItems.item1.name}</li>
-                        <li className='popular-item'>{popularItems.item2.name}</li>
-                        <li className='popular-item'>{popularItems.item3.name}</li>
+                        <Link className='links' to={`/shop/${popularItems.item1.id}`}>
+                            <li onClick={handleSearchClicked} className='popular-item'>{popularItems.item1.name}</li>
+                        </Link>
+                        <Link className='links' to={`/shop/${popularItems.item2.id}`}>
+                            <li onClick={handleSearchClicked} className='popular-item'>{popularItems.item2.name}</li>
+                        </Link>
+                        <Link className='links' to={`/shop/${popularItems.item3.id}`}>
+                            <li onClick={handleSearchClicked} className='popular-item'>{popularItems.item3.name}</li>
+                        </Link>
                     </ul>
                 </div>
             </div>
