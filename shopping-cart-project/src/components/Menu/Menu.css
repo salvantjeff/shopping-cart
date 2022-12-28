@@ -15,12 +15,13 @@
 }
 
 .menu {
-    background-color: rgb(109, 24, 255);
-    color: white;
+    background-color: #fff;
+    color: #000;
 }
 
 .menu-header {
-    background-color: rgb(240, 228, 153);
+    background-color: rgb(24, 213, 255);
+
     padding: 1rem;
 }
 
