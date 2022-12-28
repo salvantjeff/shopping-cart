@@ -17,7 +17,6 @@
     width: 100%;
     grid-template-rows: auto auto 1fr;
     overflow-y: scroll;
-    /* background-color: rgb(255, 47, 47); */
 }
 
 .support-image-container {
@@ -41,4 +40,24 @@
 .support-contacts {
     display: flex;
     justify-content: space-evenly;
+}
+
+.contacts {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    grid-auto-rows: auto 1fr;
+}
+
+.contacts-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.support-contacts>* {
+    cursor: pointer;
+}
+
+.support-contacts>*:hover {
+    scale: 1.1;
 }

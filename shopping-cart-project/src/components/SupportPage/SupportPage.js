@@ -1,5 +1,9 @@
+import { ReactComponent as GitHubLogo } from '../../svgs/GitHub.svg';
+import { ReactComponent as FacebookLogo } from '../../svgs/Facebook.svg';
+import { ReactComponent as TwitterLogo } from '../../svgs/Twitter.svg';
+import { ReactComponent as InstagramLogo } from '../../svgs/Instagram.svg';
+import imgURL from '../../img/support.jpg';
 import './SupportPage.css';
-const imgURL = 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHN1cHBvcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60';
 
 function SupportPage() {
     return (
@@ -11,13 +15,16 @@ function SupportPage() {
                 <div className='support-message'>
                     <p>Please let us know how we can help</p>
                 </div>
-                <div className='support-contacts'>
-                    <div>facebook</div>
-                    <div>ig</div>
-                    <div>
-                        twitter
+                <div className="contacts">
+                    <p className="contacts-title">Contact us</p>
+                    <div className='support-contacts'>
+                        <div><TwitterLogo width="3rem" height="3rem"/></div>
+                        <div><GitHubLogo width="3rem" height="3rem"/></div>
+                        <div><FacebookLogo width="3rem" height="3rem"/></div>
+                        <div><InstagramLogo width="3rem" height="3rem"/></div>
                     </div>
                 </div>
+              
             </div>
         </div>
     );
