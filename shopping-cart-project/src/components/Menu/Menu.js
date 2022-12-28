@@ -2,11 +2,17 @@ import './Menu.css';
 import { GrClose } from 'react-icons/gr';
 
 function Menu() {
+
+    function handleMenuClicked() {
+        document.body.classList.add('hideMenu');
+        console.log('you want to close menu');
+    };
+
     return (
         <div className="menu">
             <div className="menu-wrapper">
                 <div className="menu-header">
-                    <div className="close-menu">
+                    <div onClick={handleMenuClicked} className="close-menu">
                         <GrClose />
                     </div>
                 </div>

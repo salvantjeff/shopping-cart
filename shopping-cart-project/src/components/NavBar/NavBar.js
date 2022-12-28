@@ -3,20 +3,12 @@ import { BsSearch } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { GrShop } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 function NavBar() {
-    const [hideMenu, setHideMenu] = useState(true);
-
-    if (hideMenu) {
-        document.body.classList.add('hideMenu');
-    } else {
-        document.body.classList.remove('hideMenu');
-    }
 
     function handleMenuClicked() {
-        setHideMenu(!hideMenu);
-        console.log('you clicked on menu icon');
+        document.body.classList.remove('hideMenu');
+        console.log('you want to show menu');
     };
 
     return (
