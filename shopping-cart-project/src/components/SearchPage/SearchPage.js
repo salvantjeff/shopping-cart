@@ -2,6 +2,11 @@ import './SearchPage.css';
 import { GrClose, GrSearch } from 'react-icons/gr';
 
 function SearchPage() {
+    
+    function handleSearchClicked() {
+        document.body.classList.add('hideSearch');
+    };
+
     return (
         <div className="search-page">
             <div className="search-wrapper">
@@ -12,7 +17,7 @@ function SearchPage() {
                         <div className='search-bar-button'><GrClose /></div>
                     </div>
                     <div>
-                        <button className='cancel-button'>Cancel</button>
+                        <button onClick={handleSearchClicked} className='cancel-button'>Cancel</button>
                     </div>
                 </div>
                 <div className='search-content'>

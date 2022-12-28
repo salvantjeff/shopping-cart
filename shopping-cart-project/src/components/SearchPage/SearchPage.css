@@ -11,7 +11,7 @@
     right: 0;
     bottom: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
 }
 
 .search-page {
@@ -78,4 +78,8 @@
 
 .search-bar-button {
     cursor: pointer;
+}
+
+.hideSearch .search-page {
+    display: none;
 }

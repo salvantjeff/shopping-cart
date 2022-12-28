@@ -26,13 +26,14 @@ function App() {
             <Routes>
               <Route path='/' element={<HomePage />}/>
               {/* <Route path='/menu' element={<Menu />}/> */}
-              <Route path='/search' element={<SearchPage />}/>
+              {/* <Route path='/search' element={<SearchPage />}/> */}
               {/* <Route path='/cart' element={<CartPage />}/> */}
               <Route path='/shop' element={<ShopPage />}/>
               <Route path='/shop/:id' element={<ProductDetail />}/>
               <Route path='/support' element={<SupportPage />}/>
             </Routes>
             <Menu />
+            <SearchPage />
           </div>
         </Router>
       </div>
