@@ -125,4 +125,15 @@ const AllProductDetails = [
     },
 ];
 
-export default AllProductDetails;
+const TopsProductDetails = AllProductDetails.filter((product) => product.category === 'Tops');
+const BottomsProductDetails = AllProductDetails.filter((product) => product.category === 'Bottoms');
+const ShoesProductDetails = AllProductDetails.filter((product) => product.category === 'Shoes');
+const AccessoriesProductDetails = AllProductDetails.filter((product) => product.category === 'Accessories');
+
+export {
+    AllProductDetails,
+    BottomsProductDetails,
+    TopsProductDetails,
+    ShoesProductDetails,
+    AccessoriesProductDetails
+};

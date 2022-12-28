@@ -28,7 +28,7 @@ function App() {
               <Route path='/search' element={<SearchPage />}/>
               {/* <Route path='/cart' element={<CartPage />}/> */}
               <Route path='/shop' element={<ShopPage />}/>
-              {/* <Route path='/shop/:id' element={<ProductDetail />}/> */}
+              <Route path='/shop/:id' element={<ProductDetail />}/>
             </Routes>
           </div>
         </Router>
