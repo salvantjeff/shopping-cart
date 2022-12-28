@@ -38,7 +38,9 @@
 }
 
 .menu-item:hover {
-    background-color: rgba(0, 0, 0, .4);
+    /* background-color: rgba(0, 0, 0, .4); */
+    background-color: rgb(255, 217, 0);
+    color: black;
 }
 
 .close-menu {
