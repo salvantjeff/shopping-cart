@@ -1,5 +1,6 @@
 import './Menu.css';
 import { GrClose } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 
 function Menu() {
 
@@ -17,8 +18,12 @@ function Menu() {
                     </div>
                 </div>
                 <ul className="menu-items">
-                    <li className='menu-item'>Home</li>
-                    <li className='menu-item'>Shop</li>
+                    <Link onClick={handleMenuClicked} className='links' to="/">
+                        <li className='menu-item'>Home</li>
+                    </Link>
+                    <Link onClick={handleMenuClicked} className='links' to="/shop">
+                        <li className='menu-item'>Shop</li>
+                    </Link>
                     <li className='menu-item'>Support</li>
                 </ul>
             </div>
