@@ -1,9 +1,14 @@
 import './SearchPage.css';
 import { GrClose, GrSearch } from 'react-icons/gr';
 import { useState } from 'react';
+import { AllProductDetails } from '../ShopPage/AllProductDetails';
 
 function SearchPage() {
-
+    const popularItems = {
+        item1: AllProductDetails[0],
+        item2: AllProductDetails[1],
+        item3: AllProductDetails[2],
+    };
     function handleSearchClicked() {
         document.body.classList.add('hideSearch');
     };
@@ -46,9 +51,9 @@ function SearchPage() {
                 <div className='search-content'>
                     <ul className="popular-items">
                         <p className='popular-heading'>Popular items</p>
-                        <li className='popular-item'>Messi Jersey</li>
-                        <li className='popular-item'>Messi world cup cleats</li>
-                        <li className='popular-item'>Messi ball</li>
+                        <li className='popular-item'>{popularItems.item1.name}</li>
+                        <li className='popular-item'>{popularItems.item2.name}</li>
+                        <li className='popular-item'>{popularItems.item3.name}</li>
                     </ul>
                 </div>
             </div>
