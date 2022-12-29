@@ -113,7 +113,23 @@ function SearchPage() {
                         }
                     </ul>
                     <div className='all-searched-cards'>
-                        {suggestedItems.map(item => {
+                        {searchItem.length > 0 && 
+                            suggestedItems.map(item => {
+                                return (
+                                    <div key={item.id} className='searched-card'>
+                                        <div className='searched-image-container'>
+                                            <img className='searched-image' src={item.imgURL} alt='product'/>
+                                        </div>
+                                        <div className='searched-card__info'>
+                                            <div className='searched-card__name'>{item.name}</div>
+                                            <div className='searched-card__category'>{item.category}</div>
+                                            <div className='searched-card__price'>${item.price}</div>
+                                        </div>
+                                    </div>
+                                );
+                            })
+                        }
+                        {/* {suggestedItems.map(item => {
                             return (
                                 <div key={item.id} className='searched-card'>
                                     <div className='searched-image-container'>
@@ -126,7 +142,7 @@ function SearchPage() {
                                     </div>
                                 </div>
                             );
-                        })}
+                        })} */}
                         {/* <div className='searched-card'>
                             <div className='searched-image-container'>
                                 <img className='searched-image' src={imgURL} alt='product'/>
