@@ -1,6 +1,6 @@
 import './SearchPage.css';
 import { GrClose, GrSearch } from 'react-icons/gr';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import allProducts from '../../data/availableProducts.json';
 
@@ -26,6 +26,10 @@ function SearchPage() {
     function handleClearSearch() {
         setSearchItem('');
     };
+
+    useEffect(() => {
+        document.body.classList.remove('hideSearch');
+    }, [searchItem]);
 
     document.body.classList.add('hideSearch');
     return (
