@@ -53,14 +53,20 @@ function SearchPage() {
         const matchArray = findMatches(searchItem, allProducts);
         console.log('matched array', matchArray);
         
-        let trimmedMatchArray = [...matchArray];
-        if (matchArray.length > 3) {
-            trimmedMatchArray = trimmedMatchArray.slice(0, 3);
-        }
-        setSuggestedItems(trimmedMatchArray);
+        // let trimmedMatchArray = [...matchArray];
+        // if (matchArray.length > 3) {
+        //     trimmedMatchArray = trimmedMatchArray.slice(0, 3);
+        // }
+        // setSuggestedItems(trimmedMatchArray);
+        setSuggestedItems(matchArray);
     };
     console.log('suggested items',suggestedItems);
     console.log('typing status: ', isTyping);
+    let trimmedMatchArray = [...suggestedItems];
+    if (trimmedMatchArray.length > 3) {
+        trimmedMatchArray = trimmedMatchArray.slice(0, 3);
+    }
+    console.log('trimmed array =>>>', trimmedMatchArray);
     return (
         <div className="search-page">
             <div className="search-wrapper">
@@ -90,7 +96,7 @@ function SearchPage() {
                     <ul className="popular-items">
                         <p className='popular-heading'>{searchItem.length ? 'Suggested' : 'Popular'} items</p>
                         {isTyping ? 
-                            suggestedItems.map(item => {
+                            trimmedMatchArray.map(item => {
                                 return (
                                     <Link key={item.id} className='links' to={`/shop/${item.id}`}>
                                         <li onClick={() => handleSearchClicked()} className='popular-item'>{item.name}</li>
@@ -107,7 +113,21 @@ function SearchPage() {
                         }
                     </ul>
                     <div className='all-searched-cards'>
-                        <div className='searched-card'>
+                        {suggestedItems.map(item => {
+                            return (
+                                <div key={item.id} className='searched-card'>
+                                    <div className='searched-image-container'>
+                                        <img className='searched-image' src={item.imgURL} alt='product'/>
+                                    </div>
+                                    <div className='searched-card__info'>
+                                        <div className='searched-card__name'>{item.name}</div>
+                                        <div className='searched-card__category'>{item.category}</div>
+                                        <div className='searched-card__price'>${item.price}</div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                        {/* <div className='searched-card'>
                             <div className='searched-image-container'>
                                 <img className='searched-image' src={imgURL} alt='product'/>
                             </div>
@@ -136,7 +156,7 @@ function SearchPage() {
                                 <div className='searched-card__category'>Tops</div>
                                 <div className='searched-card__price'>$90.00</div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
