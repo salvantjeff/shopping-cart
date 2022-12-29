@@ -4,6 +4,10 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import allProducts from '../../data/availableProducts.json';
 
+const imgURL = 'https://assets.adidas.com/images/w_600,f_auto,q_auto/4f5660415c414b2c94d6ae83010a5343_9366/Argentina_22_Away_Jersey_Blue_HF2159_21_model.jpg';
+const imgURL2 = 'https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/6af8fc9d62e34d66b31baf500038c525_9366/argentina-2022-winners-tee.jpg';
+const imgURL3 = 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c982133767d74002aba5ae680123b960_9366/Argentina_Graphic_Tee_White_HG1358_21_model.jpg';
+
 function SearchPage() {  
     const [isTyping, setIsTyping] = useState(false);
     const initPopularItems = [
@@ -102,6 +106,38 @@ function SearchPage() {
                             }) 
                         }
                     </ul>
+                    <div className='all-searched-cards'>
+                        <div className='searched-card'>
+                            <div className='searched-image-container'>
+                                <img className='searched-image' src={imgURL} alt='product'/>
+                            </div>
+                            <div className='searched-card__info'>
+                                <div className='searched-card__name'>The new Argentina 2022 Away Jersey with two stars</div>
+                                <div className='searched-card__category'>Tops</div>
+                                <div className='searched-card__price'>$90.00</div>
+                            </div>
+                        </div>
+                        <div className='searched-card'>
+                            <div className='searched-image-container'>
+                                <img className='searched-image' src={imgURL3} alt='product'/>
+                            </div>
+                            <div className='searched-card__info'>
+                                <div className='searched-card__name'>Argentina 22 Away Jersey</div>
+                                <div className='searched-card__category'>Tops</div>
+                                <div className='searched-card__price'>$90.00</div>
+                            </div>
+                        </div>
+                        <div className='searched-card'>
+                            <div className='searched-image-container'>
+                                <img className='searched-image' src={imgURL2} alt='product'/>
+                            </div>
+                            <div className='searched-card__info'>
+                                <div className='searched-card__name'>Argentina 22 Away Jersey</div>
+                                <div className='searched-card__category'>Tops</div>
+                                <div className='searched-card__price'>$90.00</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>  
