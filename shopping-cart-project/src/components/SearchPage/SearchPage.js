@@ -4,15 +4,17 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import allProducts from '../../data/availableProducts.json';
 
-function SearchPage() {
-    console.log('Data =>',allProducts[0].id);
-    const [popularItems, setPopularItems] = useState([
+function SearchPage() {  
+    const [isTyping, setIsTyping] = useState(false);
+    const initPopularItems = [
         allProducts[0],
         allProducts[1],
         allProducts[2],
-    ]);
+    ];
 
-    console.log(popularItems);
+    const [popularItems, setPopularItems] = useState(initPopularItems);
+    const [suggestedItems, setSuggestedItems] = useState(initPopularItems);
+
     function handleSearchClicked() {
         document.body.classList.add('hideSearch');
     };
@@ -21,6 +23,7 @@ function SearchPage() {
     function handleOnChange(e) {
         const newSearchItem = e.target.value;
         setSearchItem(newSearchItem);
+        setIsTyping(true);
     };
 
     function handleClearSearch() {
@@ -29,9 +32,31 @@ function SearchPage() {
 
     useEffect(() => {
         document.body.classList.remove('hideSearch');
+        displayMatches();
     }, [searchItem]);
 
-    document.body.classList.add('hideSearch');
+    // document.body.classList.add('hideSearch');
+
+    function findMatches(wordToMatch, products) {
+        return products.filter(product => {
+            const regex = new RegExp(wordToMatch, 'gi');
+            return product.name.match(regex) || product.category.match(regex);
+        });
+    };
+
+    function displayMatches() {
+        console.log(searchItem);
+        const matchArray = findMatches(searchItem, allProducts);
+        console.log('matched array', matchArray);
+        
+        let trimmedMatchArray = [...matchArray];
+        if (matchArray.length > 3) {
+            trimmedMatchArray = trimmedMatchArray.slice(0, 3);
+        }
+        setSuggestedItems(trimmedMatchArray);
+    };
+    console.log('suggested items',suggestedItems);
+    console.log('typing status: ', isTyping);
     return (
         <div className="search-page">
             <div className="search-wrapper">
@@ -54,19 +79,28 @@ function SearchPage() {
                         </div>
                     </div>
                     <div>
-                        <button onClick={handleSearchClicked} className='cancel-button'>Cancel</button>
+                        <button onClick={() => handleSearchClicked()} className='cancel-button'>Cancel</button>
                     </div>
                 </div>
                 <div className='search-content'>
                     <ul className="popular-items">
-                        <p className='popular-heading'>Popular items</p>
-                        {popularItems.map(item => {
-                            return (
-                                <Link key={item.id} className='links' to={`/shop/${item.id}`}>
-                                    <li onClick={handleSearchClicked} className='popular-item'>{item.name}</li>
-                                </Link>
-                            );
-                        })}
+                        <p className='popular-heading'>{searchItem.length ? 'Suggested' : 'Popular'} items</p>
+                        {isTyping ? 
+                            suggestedItems.map(item => {
+                                return (
+                                    <Link key={item.id} className='links' to={`/shop/${item.id}`}>
+                                        <li onClick={() => handleSearchClicked()} className='popular-item'>{item.name}</li>
+                                    </Link>
+                                );
+                            }) : 
+                            popularItems.map(item => {
+                                return (
+                                    <Link key={item.id} className='links' to={`/shop/${item.id}`}>
+                                        <li onClick={() => handleSearchClicked()} className='popular-item'>{item.name}</li>
+                                    </Link>
+                                );
+                            }) 
+                        }
                     </ul>
                 </div>
             </div>
