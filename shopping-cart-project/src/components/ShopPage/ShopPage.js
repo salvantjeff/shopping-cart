@@ -2,16 +2,16 @@ import './ShopPage.css';
 import ShopProductCard from './ShopProductCard/ShopProductCard';
 import React, { useState, useEffect } from 'react';
 import {
-    AllProductDetails,
     TopsProductDetails,
     BottomsProductDetails,
     ShoesProductDetails,
     AccessoriesProductDetails
-} from './AllProductDetails';
+} from '../../data/filteredProducts';
+import allProducts from '../../data/availableProducts.json';
 
 function ShopPage() {
     const categories = {
-        all: AllProductDetails,
+        all: allProducts,
         tops: TopsProductDetails,
         bottoms: BottomsProductDetails,
         shoes: ShoesProductDetails,
@@ -28,7 +28,7 @@ function ShopPage() {
         setCategoryTitle(category.toUpperCase());
         setProductDetails(newProducts)
     };
-
+    console.log('LOOK HERE', allProducts);
     return (
         <div className='shop-page' >
             <div className='shop-page-wrapper'>

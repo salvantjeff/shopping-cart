@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Messi Home Jersey",
+        "category": "Tops",
+        "price": 100,
+        "imgURL": "https://cf.bestsoccerstore.com.cn/upload/ttmall/img/20221224/f058171ba741b4fd8815b7a5b6c1290e.png=z-0,0_f-webp",
+        "id": "85351ce4-6d19-448d-9877-fed8185e6c4c"
+    },
+    {
+        "name": "X Speedportal Leyenda.1 Firm Ground Soccer Cleats",
+        "category": "Shoes",
+        "price": 300,
+        "imgURL": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/82fb5a08f3674df09a32af1f00dd0be4_9366/X_Speedportal_Leyenda.1_Firm_Ground_Soccer_Cleats_Gold_HP9138_22_model.jpg",
+        "id": "323a22a3-56a8-4c91-abe7-e95829b75c4c"
+    },
+    {
+        "name": "World Cup FIFA Ball",
+        "category": "Accessories",
+        "price": 120,
+        "imgURL": "https://i.pinimg.com/originals/e1/4f/00/e14f004792bb52a35ee8bfbff65cf177.jpg",
+        "id": "e0fc4a5b-72b2-4189-bcc6-da0033280fc1"
+    },
+    {
+        "name": "Argentina 2022 Winners Hoodie",
+        "category": "Tops",
+        "price": 60,
+        "imgURL": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/352ce367437f4bda8386af6b00f54f31_9366/Argentina_2022_Winners_Hoody_White_IS5477_01_laydown.jpg",
+        "id": "b27df7a7-a796-498b-838a-1bf2c93cd96c"
+    },
+    {
+        "name": "Argentina Game Day Travel Pants",
+        "category": "Bottoms",
+        "price": 95,
+        "imgURL": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1642dcf706704ccab2b3aef500c60724_9366/Argentina_Game_Day_Travel_Pants_White_IC4448_21_model.jpg",
+        "id": "50225a4f-d257-41a7-be53-d816a24c67db"
+    },
+    {
+        "name": "Messi Half Pants",
+        "category": "Bottoms",
+        "price": 55,
+        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/fa605eee83e24fa68c4eae9000ed633e_9366/MESSI_1-2_PNT_Black_HI3775_01_laydown.jpg",
+        "id": "493eccab-c646-43b0-abf6-549207decfea"
+    },
+    {
+        "name": "Samba Argentina Shoes",
+        "category": "Shoes",
+        "price": 100,
+        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/2bf0242d0b83433d9b8baedd00f54ba6_9366/Samba_Argentina_Shoes_Blue_HQ7037.jpg",
+        "id": "8edaf924-4917-408b-8ed9-dfb725b40d8f"
+    },
+    {
+        "name": "X Speedportal Messi.3 Firm Ground Soccer Cleats",
+        "category": "Shoes",
+        "price": 90,
+        "imgURL": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f743d0fc7721400290efae9e00f6e8b3_9366/X_Speedportal_Messi.3_Firm_Ground_Soccer_Cleats_White_GW8390_22_model.jpg",
+        "id": "6a9416d2-8c87-42cd-a725-80d50a1dcd3e"
+    },
+    {
+        "name": "Messi Jersey",
+        "category": "Tops",
+        "price": 50,
+        "imgURL": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/58cbe074bc3d49598abdae9100ee456f_9366/Messi_Jersey_Black_HI3790_21_model.jpg",
+        "id": "99e9e9b9-daf1-4933-935b-06a5eb62ac94"
+    },
+    {
+        "name": "Argentina Comfort Slides",
+        "category": "Shoes",
+        "price": 40,
+        "imgURL": "https://www.soccermaster.com/wp-content/uploads/gx7219_adidas_argentina_adilette_comfort_slides_legacy_indigo_silver_metallic_sm_03.jpg",
+        "id": "cab3a6f3-3c7f-4f43-851b-2bdb9e054108"
+    },
+    {
+        "name": "Ultraboost DNA x Copa World Cup",
+        "category": "Shoes",
+        "price": 200,
+        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/c0ba54141cd7478a85e9aea80187b896_9366/Ultraboost_DNA_x_Copa_World_Cup_Shoes_Blue_GW7267_01_standard.jpg",
+        "id": "94b6225c-dd69-4521-bc66-040bd5be8e9a"
+    },
+    {
+        "name": "Argentina 3 Stars Winners Tee",
+        "category": "Tops",
+        "price": 50,
+        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/1b5136c86fdd471c8406af50002c4d87_9366/Argentina_2022_Winners_Tee_White_HS0418_21_model.jpg",
+        "id": "d0b16b87-7588-4505-aeb0-16cb660bbff1"
+    },
+    {
+        "name": "FIFA World Cup 2022 Argentina Tee",
+        "category": "Tops",
+        "price": 35,
+        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/3b1086f3d55f4e8f8aacaf10009442e7_9366/FIFA_World_Cup_2022tm_Argentina_Tee_Turquoise_HD6378_21_model.jpg",
+        "id": "ca379795-9597-49fc-bfd2-ab47f86dd99a"
+    },
+    {
+        "name": "Argentina 3 Stripes Hoodie",
+        "category": "Tops",
+        "price": 80,
+        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a63a299cf78a441c831eaed60136791a_9366/Argentina_3-Stripes_Hoodie_Blue_HL8434.jpg",
+        "id": "411d0b98-e345-409a-b13c-eb9de5ffc402"
+    },
+    {
+        "name": "World Cup Argentina Oversized Tee",
+        "category": "Tops",
+        "price": 30,
+        "imgURL": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/5906bdc1bbeb4969b669aeab01632719_9366/world-cup-argentina-oversized-tee-plus-size.jpg",
+        "id": "c1939faf-9efa-4ed9-bfd1-f29b459d415e"
+    },
+    {
+        "name": "Argentina Cropped Hoodie",
+        "category": "Tops",
+        "price": 55,
+        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/a2b9b44c40f840138dcaaf5000347b57_9366/Argentina_Cropped_Hoodie_Grey_HZ4294.jpg",
+        "id": "25585bb0-7c12-49ce-9af2-061671d7ca26"
+    }
+]

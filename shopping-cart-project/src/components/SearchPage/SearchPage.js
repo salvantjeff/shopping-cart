@@ -1,17 +1,18 @@
 import './SearchPage.css';
 import { GrClose, GrSearch } from 'react-icons/gr';
 import { useState } from 'react';
-import { AllProductDetails } from '../ShopPage/AllProductDetails';
 import { Link } from 'react-router-dom';
+import allProducts from '../../data/availableProducts.json';
 
 function SearchPage() {
+    console.log('Data =>',allProducts[0].id);
+    const [popularItems, setPopularItems] = useState([
+        allProducts[0],
+        allProducts[1],
+        allProducts[2],
+    ]);
 
-    const [popularItems, setPopularItems] = useState({
-        item1: AllProductDetails[0],
-        item2: AllProductDetails[1],
-        item3: AllProductDetails[2],
-    });
-
+    console.log(popularItems);
     function handleSearchClicked() {
         document.body.classList.add('hideSearch');
     };
@@ -55,15 +56,13 @@ function SearchPage() {
                 <div className='search-content'>
                     <ul className="popular-items">
                         <p className='popular-heading'>Popular items</p>
-                        <Link className='links' to={`/shop/${popularItems.item1.id}`}>
-                            <li onClick={handleSearchClicked} className='popular-item'>{popularItems.item1.name}</li>
-                        </Link>
-                        <Link className='links' to={`/shop/${popularItems.item2.id}`}>
-                            <li onClick={handleSearchClicked} className='popular-item'>{popularItems.item2.name}</li>
-                        </Link>
-                        <Link className='links' to={`/shop/${popularItems.item3.id}`}>
-                            <li onClick={handleSearchClicked} className='popular-item'>{popularItems.item3.name}</li>
-                        </Link>
+                        {popularItems.map(item => {
+                            return (
+                                <Link key={item.id} className='links' to={`/shop/${item.id}`}>
+                                    <li onClick={handleSearchClicked} className='popular-item'>{item.name}</li>
+                                </Link>
+                            );
+                        })}
                     </ul>
                 </div>
             </div>
