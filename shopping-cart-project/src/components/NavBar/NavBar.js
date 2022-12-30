@@ -10,6 +10,10 @@ function NavBar() {
         document.body.classList.remove('hideMenu');
     };
 
+    function handleSearchClicked() {
+        document.body.classList.remove('hideSearch');
+    };
+
     return (
         <nav className='nav-section'>
             <ul className='nav-bar'>
@@ -21,8 +25,9 @@ function NavBar() {
                     <Link className='links' to='/'>M</Link>
                 </li>
                 <ul className='nav-bar inner'>
-                    <li className='nav-button'>
-                        <Link className='links' to='/search'><BsSearch /></Link>
+                    <li onClick={handleSearchClicked} className='nav-button'>
+                        <BsSearch />
+                        {/* <Link className='links' to='/search'><BsSearch /></Link> */}
                     </li>
                     <li className='nav-button'><GrShop /></li>
                 </ul>

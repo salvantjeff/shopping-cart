@@ -15,8 +15,11 @@ function App() {
   useEffect(() => {
     const nav = document.querySelector('nav');
     setNavHeight(nav.offsetHeight);
+    document.body.classList.add('hideSearch');
   }, []);
-  
+
+  document.body.classList.add('hideSearch');
+
   return (
     <div className="module-content">
       <div className='unit-wrapper'>
@@ -26,13 +29,14 @@ function App() {
             <Routes>
               <Route path='/' element={<HomePage />}/>
               {/* <Route path='/menu' element={<Menu />}/> */}
-              <Route path='/search' element={<SearchPage />}/>
+              {/* <Route path='/search' element={<SearchPage />}/> */}
               {/* <Route path='/cart' element={<CartPage />}/> */}
               <Route path='/shop' element={<ShopPage />}/>
               <Route path='/shop/:id' element={<ProductDetail />}/>
               <Route path='/support' element={<SupportPage />}/>
             </Routes>
             <Menu />
+            <SearchPage />
           </div>
         </Router>
       </div>

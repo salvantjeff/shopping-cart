@@ -1,6 +1,6 @@
 import './ProductDetail.css';
 import { useParams } from 'react-router-dom';
-import { AllProductDetails } from '../ShopPage/AllProductDetails';
+import allProducts from '../../data/availableProducts.json';
 import { useEffect, useState } from 'react';
 
 const imgURL = 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/19e0246e-ba01-4900-8fc1-67e6752f0c48/air-jordan-1-retro-high-og-mens-shoes-ZdCsZM.png';
@@ -16,10 +16,18 @@ function ProductDetail() {
             id: id,
         }
     );
+
     useEffect(() => {
-        const targetProduct = AllProductDetails.filter((product) => product.id === id);
+        const targetProduct = allProducts.filter((product) => product.id === id);
         setCurrProduct(targetProduct[0]);
     }, []);
+
+    useEffect(() => {
+        const targetProduct = allProducts.filter((product) => product.id === id);
+        setCurrProduct(targetProduct[0]);
+    }, [id]);
+    
+    document.body.classList.add('hideSearch');
 
     return (
         <div className='product-detail'>
