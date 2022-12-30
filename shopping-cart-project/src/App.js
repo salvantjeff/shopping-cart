@@ -15,8 +15,11 @@ function App() {
   useEffect(() => {
     const nav = document.querySelector('nav');
     setNavHeight(nav.offsetHeight);
+    document.body.classList.add('hideSearch');
   }, []);
-  
+
+  document.body.classList.add('hideSearch');
+
   return (
     <div className="module-content">
       <div className='unit-wrapper'>

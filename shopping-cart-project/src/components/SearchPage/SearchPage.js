@@ -57,7 +57,7 @@ function SearchPage() {
     console.log('trimmed array =>>>', trimmedMatchArray);
 
     function handleSearchedItemClicked() {
-        handleSearchClicked();
+        console.log('you clicked on an item');
         setSearchItem('');
     };
 
@@ -114,7 +114,7 @@ function SearchPage() {
                                         key={item.id} 
                                         className='links' 
                                         to={`/shop/${item.id}`}
-                                        onClick={() => handleSearchedItemClicked()}
+                                        onClick={handleSearchedItemClicked}
                                     >
                                         <div className='searched-card'>
                                             <div className='searched-image-container'>

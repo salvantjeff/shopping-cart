@@ -26,6 +26,8 @@ function ProductDetail() {
         const targetProduct = allProducts.filter((product) => product.id === id);
         setCurrProduct(targetProduct[0]);
     }, [id]);
+    
+    document.body.classList.add('hideSearch');
 
     return (
         <div className='product-detail'>
