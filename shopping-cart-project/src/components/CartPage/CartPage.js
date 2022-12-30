@@ -3,12 +3,19 @@ import { GrClose } from 'react-icons/gr';
 import CartItem from './CartItem/CartItem';
 
 function CartPage() {
+
+    function handleCloseCart() {
+        document.body.classList.add('hideCart');
+    };
+    
+    document.body.classList.add('hideCart');
+
     return (
         <div className="cart-page">
             <div className="cart-wrapper">
                 <div className="cart-header">
                     <h3>Your Shopping Cart</h3>
-                    <button className='close-button'><GrClose /></button>
+                    <button onClick={handleCloseCart} className='close-button'><GrClose /></button>
                 </div>
                 <div className='cart-content'>
                     <div className='cart-items'>

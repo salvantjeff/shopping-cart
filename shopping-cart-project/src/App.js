@@ -37,6 +37,7 @@ function App() {
             </Routes>
             <Menu />
             <SearchPage />
+            <CartPage />
           </div>
         </Router>
       </div>
