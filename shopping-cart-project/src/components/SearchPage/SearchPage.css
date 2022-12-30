@@ -69,6 +69,11 @@
     cursor: pointer;
     /* background-color: rgb(46, 140, 255); */
     font-weight: 500;
+    color: #bdbdbd;
+}
+
+.matched {
+    color: rgb(0, 234, 255);
 }
 
 .popular-heading {

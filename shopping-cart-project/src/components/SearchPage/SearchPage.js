@@ -3,6 +3,7 @@ import { GrClose, GrSearch } from 'react-icons/gr';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import allProducts from '../../data/availableProducts.json';
+import parse from 'html-react-parser';
 
 function SearchPage() {  
     const [isTyping, setIsTyping] = useState(false);
@@ -91,9 +92,15 @@ function SearchPage() {
                         <p className='popular-heading'>{searchItem.length ? 'Suggested' : 'Popular'} items</p>
                         {isTyping ? 
                             trimmedMatchArray.map(item => {
+                                const regex = new RegExp(searchItem, 'gi');
+                                const newName = item.name.slice();
+                                // const originalString = newName.match(regex);
+                                // console.log(originalString);
+                                const matchedWords = newName.replace(regex, `<span class="matched">${searchItem}</span>`);
+                                const newMatchedJSX = parse(matchedWords);
                                 return (
                                     <Link key={item.id} className='links' to={`/shop/${item.id}`}>
-                                        <li onClick={() => handleSearchClicked()} className='popular-item'>{item.name}</li>
+                                        <li onClick={() => handleSearchClicked()} className='popular-item'>{newMatchedJSX}</li>
                                     </Link>
                                 );
                             }) : 
