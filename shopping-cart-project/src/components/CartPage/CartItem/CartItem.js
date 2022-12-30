@@ -1,6 +1,12 @@
 import './CartItem.css';
 
-function CartItem({ product, quantity, index, handleAddQuantity}) {
+function CartItem({ 
+    product, 
+    quantity, 
+    index, 
+    handleAddQuantity, 
+    handleDecreaseQuantity
+}) {
     return (
         <div className='cart-item'>
             <div className='cart-item__image-container'>
@@ -10,9 +16,17 @@ function CartItem({ product, quantity, index, handleAddQuantity}) {
                 <div className='cart-item__name'>{product.name}</div>
                 <div className='cart-item__category'>{product.category}</div>
                 <div className='cart-item__counter'>
-                    <div className='minus-button' data-index={index}>-</div>
+                    <div 
+                        onClick={handleDecreaseQuantity} 
+                        className='minus-button' 
+                        data-index={index}
+                    >-</div>
                     <p className='cart-item__quantity'>{quantity}</p>
-                    <div onClick={handleAddQuantity} className='add-button' data-index={index}>+</div>
+                    <div 
+                        onClick={handleAddQuantity} 
+                        className='add-button' 
+                        data-index={index}
+                    >+</div>
                 </div>
             </div>
         </div>

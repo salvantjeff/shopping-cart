@@ -33,7 +33,7 @@ function CartPage() {
     useEffect(() => {
         document.body.classList.add('hideCart');
     }, []);
-    
+
     function handleCloseCart() {
         document.body.classList.add('hideCart');
     };
@@ -53,6 +53,22 @@ function CartPage() {
         setCartItems(newCartItems);
     };
 
+    function handleDecreaseQuantity(e) {
+        const index = parseInt(e.target.dataset.index);
+        console.log(index);
+        const newCartItems = cartItems.map((product, i) => {
+            if (index === i) {
+                return {
+                    ...product,
+                    quantity: product.quantity - 1,
+                };
+            }
+            return product;
+        });
+
+        setCartItems(newCartItems);
+    };
+
     return (
         <div className="cart-page">
             <div className="cart-wrapper">
@@ -68,7 +84,8 @@ function CartPage() {
                                     product={item.product} 
                                     quantity={item.quantity} 
                                     index={index}
-                                    handleAddQuantity={handleAddQuantity}    
+                                    handleAddQuantity={handleAddQuantity} 
+                                    handleDecreaseQuantity={handleDecreaseQuantity}   
                                 />
                             </div>
                         );
