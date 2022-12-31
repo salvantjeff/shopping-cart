@@ -15,6 +15,7 @@ function CartItem({
             <div className='cart-item__details'>
                 <div className='cart-item__name'>{product.name}</div>
                 <div className='cart-item__category'>{product.category}</div>
+                <div className='cart-item__price'>${product.price}</div>
                 <div className='cart-item__counter'>
                     <div 
                         onClick={handleDecreaseQuantity} 
