@@ -33,8 +33,9 @@ function NavBar() {
                         <BsSearch />
                         {/* <Link className='links' to='/search'><BsSearch /></Link> */}
                     </li>
-                    <li onClick={handleCartClicked} className='nav-button'>
+                    <li onClick={handleCartClicked} className='nav-button shop-bag'>
                         <GrShop />
+                        <div className='cart-count'>0</div>
                     </li>
                 </ul>
             </ul>
