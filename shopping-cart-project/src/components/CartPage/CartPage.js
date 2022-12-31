@@ -3,32 +3,32 @@ import { GrClose } from 'react-icons/gr';
 import CartItem from './CartItem/CartItem';
 import { useEffect, useState } from 'react';
 
-function CartPage() {
-    const initProduct = {
-        "name": "Samba Argentina Shoes",
-        "category": "Shoes",
-        "price": 100.00,
-        "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/2bf0242d0b83433d9b8baedd00f54ba6_9366/Samba_Argentina_Shoes_Blue_HQ7037.jpg",
-        "id": "8edaf924-4917-408b-8ed9-dfb725b40d8f"
-    };
-    const initProduct2 = {
-        "name": "Argentina 2022 Winners Hoodie",
-        "category": "Tops",
-        "price": 60.01,
-        "imgURL": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/352ce367437f4bda8386af6b00f54f31_9366/Argentina_2022_Winners_Hoody_White_IS5477_01_laydown.jpg",
-        "id": "b27df7a7-a796-498b-838a-1bf2c93cd96c"
-    };
+function CartPage({ cartItems, setCartItems }) {
+    // const initProduct = {
+    //     "name": "Samba Argentina Shoes",
+    //     "category": "Shoes",
+    //     "price": 100.00,
+    //     "imgURL": "https://assets.adidas.com/images/w_600,f_auto,q_auto/2bf0242d0b83433d9b8baedd00f54ba6_9366/Samba_Argentina_Shoes_Blue_HQ7037.jpg",
+    //     "id": "8edaf924-4917-408b-8ed9-dfb725b40d8f"
+    // };
+    // const initProduct2 = {
+    //     "name": "Argentina 2022 Winners Hoodie",
+    //     "category": "Tops",
+    //     "price": 60.01,
+    //     "imgURL": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/352ce367437f4bda8386af6b00f54f31_9366/Argentina_2022_Winners_Hoody_White_IS5477_01_laydown.jpg",
+    //     "id": "b27df7a7-a796-498b-838a-1bf2c93cd96c"
+    // };
 
-    const [cartItems, setCartItems] = useState([
-        {
-            product: initProduct,
-            quantity: 1,
-        },
-        {
-            product: initProduct2,
-            quantity: 1,
-        },
-    ]);
+    // const [cartItems, setCartItems] = useState([
+    //     {
+    //         product: initProduct,
+    //         quantity: 1,
+    //     },
+    //     {
+    //         product: initProduct2,
+    //         quantity: 1,
+    //     },
+    // ]);
     
     const [totalPrice, setTotalPrice] = useState(0.00);
 
@@ -106,7 +106,7 @@ function CartPage() {
         };
         updateTotalPrice();
     }, [cartItems]);
-    
+
     return (
         <div className="cart-page">
             <div className="cart-wrapper">
