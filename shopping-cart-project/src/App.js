@@ -19,6 +19,11 @@ function App() {
   }, []);
 
   document.body.classList.add('hideSearch');
+  function handleAddToBag(e) {
+    console.log('Adding to bag');
+    const itemID = e.target.dataset.id;
+    console.log(itemID);
+  };
 
   return (
     <div className="module-content">
@@ -32,7 +37,7 @@ function App() {
               {/* <Route path='/search' element={<SearchPage />}/> */}
               {/* <Route path='/cart' element={<CartPage />}/> */}
               <Route path='/shop' element={<ShopPage />}/>
-              <Route path='/shop/:id' element={<ProductDetail />}/>
+              <Route path='/shop/:id' element={<ProductDetail handleAddToBag={handleAddToBag} />}/>
               <Route path='/support' element={<SupportPage />}/>
             </Routes>
             <Menu />
