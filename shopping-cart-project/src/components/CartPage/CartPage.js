@@ -69,6 +69,25 @@ function CartPage() {
         setCartItems(newCartItems);
     };
 
+    useEffect(() => {
+        function checkItems() {
+            let hasZeroItem = false;
+            let idx;
+            for (let i = 0; i < cartItems.length; i++) {
+                const currQuantity = cartItems[i].quantity;
+                if (currQuantity <= 0) {
+                    hasZeroItem = true;
+                    idx = i;
+                };
+            };
+            if (hasZeroItem) {
+                const newCartItems = cartItems.filter((item, i) => i !== idx);
+                setCartItems(newCartItems);
+            };
+        };
+        checkItems();
+    }, [cartItems]);
+
     return (
         <div className="cart-page">
             <div className="cart-wrapper">
