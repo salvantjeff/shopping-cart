@@ -22,6 +22,19 @@ function App() {
   document.body.classList.add('hideSearch');
 
   const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    function countCartItems() {
+      let count = 0;
+      for (let item of cartItems) {
+        count += item.quantity;
+      };
+      console.log('cart items count: ',count);
+      setCartCount(count);
+    };
+    countCartItems()
+  }, [cartItems]);
 
   function handleAddToBag(e) {
     console.log('Adding to bag');
@@ -65,7 +78,7 @@ function App() {
     <div className="module-content">
       <div className='unit-wrapper'>
         <Router>
-          <NavBar/>
+          <NavBar cartCount={cartCount}/>
           <div className='page-contents' style={{marginTop: `${navHeight}px`}}>
             <Routes>
               <Route path='/' element={<HomePage />}/>
