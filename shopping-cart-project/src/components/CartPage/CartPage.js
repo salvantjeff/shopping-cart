@@ -96,23 +96,24 @@ function CartPage() {
                     <button onClick={handleCloseCart} className='close-button'><GrClose /></button>
                 </div>
                 <div className='cart-content'>
-                    {cartItems.map((item, index) => {
-                        return (
-                            <div key={item.product.id} className='cart-items'>
-                                <CartItem 
-                                    product={item.product} 
-                                    quantity={item.quantity} 
-                                    index={index}
-                                    handleAddQuantity={handleAddQuantity} 
-                                    handleDecreaseQuantity={handleDecreaseQuantity}   
-                                />
-                            </div>
-                        );
-                    })}
-                   
-                    {/* <div>
-                        <p className='empty-cart-message'>Your bag is empty</p>
-                    </div> */}
+                    {cartItems.length > 0 ? 
+                        cartItems.map((item, index) => {
+                            return (
+                                <div key={item.product.id} className='cart-items'>
+                                    <CartItem 
+                                        product={item.product} 
+                                        quantity={item.quantity} 
+                                        index={index}
+                                        handleAddQuantity={handleAddQuantity} 
+                                        handleDecreaseQuantity={handleDecreaseQuantity}   
+                                    />
+                                </div>
+                            );
+                        }) :
+                        <div>
+                            <p className='empty-cart-message'>Your bag is empty</p>
+                        </div> 
+                    }
                 </div>
                 <div className='cart-checkout-footer'>
                     <div className='cart-total-wrapper'>
