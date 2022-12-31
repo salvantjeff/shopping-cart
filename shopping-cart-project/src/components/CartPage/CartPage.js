@@ -30,6 +30,8 @@ function CartPage() {
         },
     ]);
     
+    const [totalPrice, setTotalPrice] = useState(0.00);
+
     useEffect(() => {
         document.body.classList.add('hideCart');
     }, []);
@@ -88,6 +90,23 @@ function CartPage() {
         checkItems();
     }, [cartItems]);
 
+    useEffect(() => {
+        function updateTotalPrice() {
+            let currTotalPrice = 0.00;
+            const currentCartItems = [...cartItems];
+            for (let i = 0; i < currentCartItems.length; i++) {
+                const currentElem = currentCartItems[i];
+                const productPrice = currentElem.product.price;
+                const productQuantity = currentElem.quantity;
+                currTotalPrice += productPrice * productQuantity;
+            };
+            if (totalPrice !== currTotalPrice) {
+                setTotalPrice(currTotalPrice);
+            };
+        };
+        updateTotalPrice();
+    }, [cartItems]);
+    
     return (
         <div className="cart-page">
             <div className="cart-wrapper">
@@ -118,7 +137,7 @@ function CartPage() {
                 <div className='cart-checkout-footer'>
                     <div className='cart-total-wrapper'>
                         <p className='cart-total-label'>Total</p>
-                        <p className='cart-total-price'>$0.00</p>
+                        <p className='cart-total-price'>${totalPrice}</p>
                     </div>
                     <a href='/' className='checkout-link'>
                         <div className='checkout-button'>Checkout</div>
