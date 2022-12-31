@@ -14,6 +14,10 @@ function NavBar() {
         document.body.classList.remove('hideSearch');
     };
 
+    function handleCartClicked() {
+        document.body.classList.remove('hideCart');
+    };
+
     return (
         <nav className='nav-section'>
             <ul className='nav-bar'>
@@ -29,7 +33,9 @@ function NavBar() {
                         <BsSearch />
                         {/* <Link className='links' to='/search'><BsSearch /></Link> */}
                     </li>
-                    <li className='nav-button'><GrShop /></li>
+                    <li onClick={handleCartClicked} className='nav-button'>
+                        <GrShop />
+                    </li>
                 </ul>
             </ul>
         </nav>

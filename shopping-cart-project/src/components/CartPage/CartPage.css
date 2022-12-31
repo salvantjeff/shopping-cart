@@ -10,7 +10,7 @@
     right: 0;
     bottom: 0;
     position: fixed;
-    z-index: 9;
+    z-index: 100;
     background-color: rgba(0, 0, 0, .6);
 }
 
@@ -18,7 +18,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
     width: 40%;
     height: 100%;
     padding: 2rem 1rem;
@@ -86,4 +86,8 @@
 .empty-cart-message {
     text-align: center;
     color: rgb(146, 146, 146);
+}
+
+.hideCart .cart-page {
+    display: none;
 }

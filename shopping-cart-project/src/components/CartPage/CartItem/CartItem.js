@@ -1,20 +1,41 @@
 import './CartItem.css';
+import { Link } from 'react-router-dom';
 
-const imgURL = 'https://assets.adidas.com/images/w_303,h_303,f_auto,q_auto,fl_lossy,c_fill,g_auto/6af8fc9d62e34d66b31baf500038c525_9366/argentina-2022-winners-tee.jpg';
-
-function CartItem() {
+function CartItem({ 
+    product, 
+    quantity, 
+    index, 
+    handleAddQuantity, 
+    handleDecreaseQuantity,
+    handleCloseCart,
+}) {
     return (
         <div className='cart-item'>
             <div className='cart-item__image-container'>
-                <img className='cart-item__image' src={imgURL} alt='cart item'/>
+                <img className='cart-item__image' src={product.imgURL} alt='cart item'/>
             </div>
             <div className='cart-item__details'>
-                <div className='cart-item__name'>Argentina Sambas</div>
-                <div className='cart-item__category'>Shoes</div>
+                <Link 
+                    onClick={handleCloseCart} 
+                    className='links' 
+                    to={`/shop/${product.id}`}
+                >
+                    <div className='cart-item__name'>{product.name}</div>
+                </Link>
+                <div className='cart-item__category'>{product.category}</div>
+                <div className='cart-item__price'>${Number(product.price).toFixed(2)}</div>
                 <div className='cart-item__counter'>
-                    <div className='minus-button'>-</div>
-                    <p className='cart-item__quantity'>1</p>
-                    <div className='add-button'>+</div>
+                    <div 
+                        onClick={handleDecreaseQuantity} 
+                        className='minus-button' 
+                        data-index={index}
+                    >-</div>
+                    <p className='cart-item__quantity'>{quantity}</p>
+                    <div 
+                        onClick={handleAddQuantity} 
+                        className='add-button' 
+                        data-index={index}
+                    >+</div>
                 </div>
             </div>
         </div>

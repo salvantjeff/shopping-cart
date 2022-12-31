@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const imgURL = 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/19e0246e-ba01-4900-8fc1-67e6752f0c48/air-jordan-1-retro-high-og-mens-shoes-ZdCsZM.png';
 
-function ProductDetail() {
+function ProductDetail({ handleAddToBag }) {
     const { id } = useParams();    
     const [currProduct, setCurrProduct] = useState(
         {
@@ -41,7 +41,11 @@ function ProductDetail() {
                     <img className='product-detail-image' src={currProduct.imgURL} alt='product'/>
                 </div>
                 <div className='product-detail-buttons'>
-                    <button className='add-to-bag'>Add to Bag</button>
+                    <button 
+                        data-id={currProduct.id}
+                        onClick={handleAddToBag} 
+                        className='add-to-bag'
+                    >Add to Bag</button>
                 </div>
             </div>
         </div>
