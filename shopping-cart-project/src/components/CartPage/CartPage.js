@@ -99,7 +99,8 @@ function CartPage({ cartItems, setCartItems }) {
                                         quantity={item.quantity} 
                                         index={index}
                                         handleAddQuantity={handleAddQuantity} 
-                                        handleDecreaseQuantity={handleDecreaseQuantity}   
+                                        handleDecreaseQuantity={handleDecreaseQuantity}  
+                                        handleCloseCart={handleCloseCart} 
                                     />
                                 </div>
                             );
