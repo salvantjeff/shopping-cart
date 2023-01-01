@@ -62,6 +62,20 @@ function SearchPage() {
         setSearchItem('');
     };
 
+    useEffect(() => {
+        const searchPage = document.querySelector('.search-page');
+        const cancelButton = document.querySelector('.cancel-button');
+
+        cancelButton.addEventListener('click', () => {
+            searchPage.setAttribute('closing', "");
+
+            searchPage.addEventListener('animationend', () => {
+                searchPage.removeAttribute('closing');
+                handleSearchClicked();
+            }, {once: true});
+        });
+    });
+
     return (
         <div className="search-page">
             <div className="search-wrapper">

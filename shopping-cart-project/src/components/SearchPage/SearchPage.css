@@ -17,6 +17,7 @@
 
 .search-page {
     background-color: #fff;
+    animation: slide-in .5s forwards;
 }
 
 .search-header {
@@ -133,4 +134,31 @@
 
 .searched-card__category {
     color: rgb(170, 170, 170);
+}
+
+.search-page[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fade-out .5s forwards;
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
 }
