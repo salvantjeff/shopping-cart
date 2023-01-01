@@ -1,0 +1,9 @@
+.checkout-message {
+    max-width: 46ch;
+    padding: 0 1rem;
+}
+
+.gratitude {
+    margin-top: 2rem;
+    text-align: center;
+}
