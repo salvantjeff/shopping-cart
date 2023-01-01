@@ -2,8 +2,7 @@ import './ProductDetail.css';
 import { useParams } from 'react-router-dom';
 import allProducts from '../../data/availableProducts.json';
 import { useEffect, useState } from 'react';
-
-const imgURL = 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/19e0246e-ba01-4900-8fc1-67e6752f0c48/air-jordan-1-retro-high-og-mens-shoes-ZdCsZM.png';
+import emi from '../../img/emi.webp';
 
 function ProductDetail({ handleAddToBag }) {
     const { id } = useParams();    
@@ -12,7 +11,7 @@ function ProductDetail({ handleAddToBag }) {
             name: 'No current item',
             category: 'Shop',
             price: 0.00,
-            imgURL: imgURL,
+            imgURL: emi,
             id: id,
         }
     );

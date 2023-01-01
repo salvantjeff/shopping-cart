@@ -12,7 +12,6 @@
 
 .product-detail-wrapper {
     padding: 1rem;
-    /* background-color: lightsalmon; */
     display: grid;
     gap: 1rem;
     max-width: 1050px;
