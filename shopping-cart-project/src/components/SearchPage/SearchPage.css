@@ -71,6 +71,11 @@
     /* background-color: rgb(46, 140, 255); */
     font-weight: 500;
     color: #bdbdbd;
+    transition: color 200ms ease-in-out;
+}
+
+.popular-item:hover {
+    color: #9c9c9c;
 }
 
 .matched {
