@@ -47,6 +47,7 @@
     border: none;
     cursor: pointer;
     height: max-content;
+    transition: background-color 200ms ease-in-out;
 }
 
 .add-to-bag:hover {
