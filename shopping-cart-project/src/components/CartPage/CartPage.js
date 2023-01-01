@@ -83,6 +83,46 @@ function CartPage({ cartItems, setCartItems }) {
         updateTotalPrice();
     }, [cartItems]);
 
+    useEffect(() => {
+        const overlay = document.querySelector('.cart-page');
+        function handleOverlayClick(e) {
+            if (e.target.className === 'cart-page') {
+                handleCloseCart();
+            }
+        }
+        overlay.addEventListener('click', handleOverlayClick);
+        return () => {
+            overlay.removeEventListener('click', handleOverlayClick);
+        }
+    });
+
+    useEffect(() => {
+        const cartPageLayout = document.querySelector('.cart-page');
+        const closeButton = document.querySelector('.close-button');
+
+        closeButton.addEventListener('click', () => {
+            cartPageLayout.setAttribute('closing', "");
+
+            cartPageLayout.addEventListener('animationend', () => {
+                cartPageLayout.removeAttribute('closing');
+                handleCloseCart();
+            }, {once: true});
+        });
+    });
+
+    useEffect(() => {
+        const cartPageContent = document.querySelector('.cart-wrapper');
+        const closeButton = document.querySelector('.close-button');
+
+        closeButton.addEventListener('click', () => {
+            cartPageContent.setAttribute('closing', "");
+
+            cartPageContent.addEventListener('animationend', () => {
+                cartPageContent.removeAttribute('closing');
+            }, {once: true});
+        });
+    });
+
     return (
         <div className="cart-page">
             <div className="cart-wrapper">
