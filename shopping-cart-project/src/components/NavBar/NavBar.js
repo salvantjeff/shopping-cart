@@ -24,9 +24,11 @@ function NavBar({ cartCount }) {
                 <li onClick={handleMenuClicked} className='nav-button'>
                     <AiOutlineMenu />
                 </li>
-                <li className='logo nav-button'>
-                    <Link className='links' to='/'>M</Link>
-                </li>
+                
+                <Link className='links' to='/'>
+                    <li className='logo nav-button'>M</li>
+                </Link>
+
                 <ul className='nav-bar inner'>
                     <li onClick={handleSearchClicked} className='nav-button'>
                         <BsSearch />
