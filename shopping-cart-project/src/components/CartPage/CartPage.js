@@ -83,6 +83,19 @@ function CartPage({ cartItems, setCartItems }) {
         updateTotalPrice();
     }, [cartItems]);
 
+    useEffect(() => {
+        const overlay = document.querySelector('.cart-page');
+        function handleOverlayClick(e) {
+            if (e.target.className === 'cart-page') {
+                handleCloseCart();
+            }
+        }
+        overlay.addEventListener('click', handleOverlayClick);
+        return () => {
+            overlay.removeEventListener('click', handleOverlayClick);
+        }
+    });
+
     return (
         <div className="cart-page">
             <div className="cart-wrapper">
