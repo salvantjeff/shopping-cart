@@ -2,6 +2,9 @@
     display: grid;
     grid-template-rows: 1fr auto;
     height: max-content;
+    background-color: rgb(255, 255, 255);
+    min-height: 360px;
+    width: 100%;
 }
 
 .product-image {
@@ -28,4 +31,8 @@
 
 .product-card__category {
     color: rgb(170, 170, 170);
+}
+
+.product-image-container {
+    background-color: rgb(220, 220, 220);
 }
