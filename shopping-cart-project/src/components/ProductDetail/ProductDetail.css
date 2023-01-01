@@ -22,6 +22,8 @@
 .product-detail-figure {
     max-width: 550px;
     max-height: 650px;
+    min-height: 600px;
+    background-color: rgb(210, 210, 210);
     overflow: hidden;
 }
 
