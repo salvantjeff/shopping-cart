@@ -1,7 +1,3 @@
-/* body.active-modal {
-    overflow-y: hidden;
-} */
-
 .cart-page {
     width: 100vw;
     height: 100vh;
@@ -56,7 +52,6 @@
 .cart-items {
     display: grid;
     gap: .5rem;
-    /* background-color: rgb(172, 152, 218); */
 }
 
 .cart-checkout-footer {
@@ -125,16 +120,6 @@
 
     0% {
         opacity: 1;
-    }
-}
-
-@keyframes slide-down {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    100% {
-        transform: translateY(0%);
     }
 }
 
