@@ -4,7 +4,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { GrShop } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 
-function NavBar() {
+function NavBar({ cartCount }) {
 
     function handleMenuClicked() {
         document.body.classList.remove('hideMenu');
@@ -33,8 +33,9 @@ function NavBar() {
                         <BsSearch />
                         {/* <Link className='links' to='/search'><BsSearch /></Link> */}
                     </li>
-                    <li onClick={handleCartClicked} className='nav-button'>
+                    <li onClick={handleCartClicked} className='nav-button shop-bag'>
                         <GrShop />
+                        <div className='cart-count'>{cartCount}</div>
                     </li>
                 </ul>
             </ul>
