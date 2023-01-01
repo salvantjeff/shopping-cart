@@ -44,8 +44,24 @@ nav {
     position: relative;
 }
 
-.cart-count {
+.showCartCount .cart-count {
     opacity: .6;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+}
+
+.cart-count {
+    opacity: 0;
     color: white;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;

@@ -74,6 +74,16 @@ function App() {
     }
   };
   
+  function checkCartStatus() {
+    if (cartItems.length) {
+      document.body.classList.add('showCartCount');
+    } else {
+      document.body.classList.remove('showCartCount');
+    }
+  };
+
+  checkCartStatus();
+  
   return (
     <div className="module-content">
       <div className='unit-wrapper'>
