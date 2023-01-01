@@ -108,8 +108,6 @@ function SearchPage() {
                             trimmedMatchArray.map(item => {
                                 const regex = new RegExp(searchItem, 'gi');
                                 const newName = item.name.slice();
-                                // const originalString = newName.match(regex);
-                                // console.log(originalString);
                                 const matchedWords = newName.replace(regex, `<span class="matched">${searchItem}</span>`);
                                 const newMatchedJSX = parse(matchedWords);
                                 return (
