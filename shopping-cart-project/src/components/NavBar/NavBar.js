@@ -23,7 +23,6 @@ function NavBar({ cartCount }) {
             <ul className='nav-bar'>
                 <li onClick={handleMenuClicked} className='nav-button'>
                     <AiOutlineMenu />
-                    {/* <Link className='links' to='/menu'><AiOutlineMenu /></Link>   */}
                 </li>
                 <li className='logo nav-button'>
                     <Link className='links' to='/'>M</Link>
@@ -31,7 +30,6 @@ function NavBar({ cartCount }) {
                 <ul className='nav-bar inner'>
                     <li onClick={handleSearchClicked} className='nav-button'>
                         <BsSearch />
-                        {/* <Link className='links' to='/search'><BsSearch /></Link> */}
                     </li>
                     <li onClick={handleCartClicked} className='nav-button shop-bag'>
                         <GrShop />
