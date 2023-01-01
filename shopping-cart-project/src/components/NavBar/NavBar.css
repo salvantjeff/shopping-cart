@@ -38,6 +38,16 @@ nav {
 
 .nav-button {
     cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: rgb(235, 235, 235);
 }
 
 .shop-bag {
