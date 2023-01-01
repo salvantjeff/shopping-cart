@@ -37,6 +37,8 @@
     /* color: rgb(2, 234, 255); */
     color: white;
     text-decoration: none;
+    width: max-content;
+    margin: auto;
 }
 
 .cta-link {
