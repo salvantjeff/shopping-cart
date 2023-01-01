@@ -12,6 +12,7 @@
     position: fixed;
     z-index: 100;
     background-color: rgba(0, 0, 0, .6);
+    animation: fade-in 500ms forwards;
 }
 
 .cart-wrapper {
@@ -29,6 +30,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    animation: slide-in 500ms forwards;
 }
 
 .cart-header {
@@ -90,4 +92,68 @@
 
 .hideCart .cart-page {
     display: none;
+}
+
+.cart-page[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: fade-out 1s forwards;
+}
+
+.cart-wrapper[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    animation: slide-out 1s forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(150%)
+    }
+
+    100% {
+        transform: translateX(350%);
+    }
 }
