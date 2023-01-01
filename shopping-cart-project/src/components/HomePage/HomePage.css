@@ -34,15 +34,16 @@
 }
 
 .shop-link {
-    /* color: rgb(2, 234, 255); */
     color: white;
     text-decoration: none;
+    width: max-content;
+    margin: auto;
+    position: relative;
 }
 
 .cta-link {
     background-color: rgba(2, 234, 255, .6);
     width: max-content;
-    border-radius: 1rem;
     padding: 1rem;
     margin: auto;
     display: flex;
@@ -50,10 +51,32 @@
     align-items: center;
     text-transform: uppercase;
     cursor: pointer;
+    z-index: 1;
 }
 
-.cta-link:hover {
+.cta-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
     background-color: rgba(2, 234, 255, 1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+
+.cta-link:hover::before,
+.cta-link:focus::before {
+    transform: scaleX(1);
+}
+
+.cta-link:hover,
+.cta-link:focus {
+    color: white;
+    font-weight: 600;
 }
 
 .shop-now-icon {

@@ -23,6 +23,7 @@
 .shop-categories {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .product-cards {
