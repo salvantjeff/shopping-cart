@@ -17,6 +17,8 @@
 .menu {
     background-color: #fff;
     color: #000;
+    /* animation: slide-down 500ms forwards; */
+    animation: slide-down .36s cubic-bezier(0.32, 0.08, 0.24, 1) forwards;
 }
 
 .menu-header {
@@ -49,4 +51,45 @@
 
 .hideMenu .menu {
     display: none;
+}
+
+.menu[closing] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    /* animation:
+        slide-up .56s cubic-bezier(0.52, 0.16, 0.24, 1) forwards,
+        fade-out 1s forwards; */
+    animation:
+        slide-up .56s cubic-bezier(0.52, 0.16, 0.24, 1) forwards;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
 }

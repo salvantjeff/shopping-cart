@@ -1,6 +1,7 @@
 import './Menu.css';
 import { GrClose } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Menu() {
 
@@ -9,6 +10,20 @@ function Menu() {
     };
     
     document.body.classList.add('hideMenu');
+
+    useEffect(() => {
+        const menuPage = document.querySelector('.menu');
+        const closeButton = document.querySelector('.close-menu');
+
+        closeButton.addEventListener('click', () => {
+            menuPage.setAttribute('closing', "");
+
+            menuPage.addEventListener('animationend', () => {
+                menuPage.removeAttribute('closing');
+                handleMenuClicked();
+            }, {once: true});
+        });
+    });
 
     return (
         <div className="menu">
