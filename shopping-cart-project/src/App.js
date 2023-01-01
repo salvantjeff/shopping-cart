@@ -10,6 +10,7 @@ import ProductDetail from './components/ProductDetail/ProductDetail';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SupportPage from './components/SupportPage/SupportPage';
 import allProducts from './data/availableProducts.json';
+import CheckoutPage from './components/CheckoutPage/CheckoutPage';
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
@@ -98,6 +99,7 @@ function App() {
               <Route path='/shop' element={<ShopPage />}/>
               <Route path='/shop/:id' element={<ProductDetail handleAddToBag={handleAddToBag} />}/>
               <Route path='/support' element={<SupportPage />}/>
+              <Route path='/checkout' element={<CheckoutPage />}/>
             </Routes>
             <Menu />
             <SearchPage />
