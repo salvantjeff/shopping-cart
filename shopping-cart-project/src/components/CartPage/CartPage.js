@@ -2,6 +2,7 @@ import './CartPage.css';
 import { GrClose } from 'react-icons/gr';
 import CartItem from './CartItem/CartItem';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function CartPage({ cartItems, setCartItems }) {
     
@@ -115,9 +116,9 @@ function CartPage({ cartItems, setCartItems }) {
                         <p className='cart-total-label'>Total</p>
                         <p className='cart-total-price'>${Number(totalPrice).toFixed(2)}</p>
                     </div>
-                    <a href='/' className='checkout-link'>
+                    <Link onClick={handleCloseCart} className='links checkout-link' to='/checkout'>
                         <div className='checkout-button'>Checkout</div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>  
