@@ -95,6 +95,7 @@ nav {
     display: none;
     color: #000;
     font-size: 1rem;
+    animation: fade-in 200ms forwards;
 }
 
 .nav-links-desktop>*:hover {
@@ -109,5 +110,25 @@ nav {
 
     .nav-button.menu-icon {
         display: none;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
     }
 }
