@@ -85,3 +85,29 @@ nav {
     bottom: -8px;
     right: -8px;
 }
+
+.nav-links-desktop {
+    list-style: none;
+    gap: 1rem;
+    position: absolute;
+    top: 25%;
+    left: 1rem;
+    display: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+.nav-links-desktop>*:hover {
+    color: rgb(116, 116, 116);
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .nav-links-desktop {
+        display: flex;
+    }
+
+    .nav-button.menu-icon {
+        display: none;
+    }
+}
