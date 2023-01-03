@@ -21,7 +21,18 @@ function NavBar({ cartCount }) {
     return (
         <nav className='nav-section'>
             <ul className='nav-bar'>
-                <li onClick={handleMenuClicked} className='nav-button'>
+                <ul className='nav-links-desktop'>
+                    <Link className='links' to='/'>
+                        <li>Home</li>
+                    </Link>
+                    <Link className='links' to='/shop'>
+                        <li>Shop</li>
+                    </Link>
+                    <Link className='links' to='/support'>
+                        <li>Support</li>
+                    </Link>
+                </ul>
+                <li onClick={handleMenuClicked} className='nav-button menu-icon'>
                     <AiOutlineMenu />
                 </li>
                 
