@@ -10,3 +10,4 @@
 10. Add slide out animation when click on routes from search page
 11. Fix min height of product detail image (way too long) - on mobile
 12. When in mobile the cart page should take up more space - its way too small
+13. Change react tab icon to some to Messi logo
