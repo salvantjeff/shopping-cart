@@ -82,3 +82,13 @@
 .shop-now-icon {
     font-size: 1rem;
 }
+
+.sub-headline {
+    font-size: .90rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.headline {
+    text-transform: uppercase;
+}
