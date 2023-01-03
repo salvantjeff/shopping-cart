@@ -18,6 +18,7 @@
     grid-template-rows: auto auto 1fr;
     overflow-y: scroll;
     background-color: #fff;
+    padding-bottom: 3rem;
 }
 
 .shop-categories {

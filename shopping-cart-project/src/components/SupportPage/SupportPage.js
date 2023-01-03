@@ -4,6 +4,7 @@ import { ReactComponent as TwitterLogo } from '../../svgs/Twitter.svg';
 import { ReactComponent as InstagramLogo } from '../../svgs/Instagram.svg';
 import imgURL from '../../img/support.jpg';
 import './SupportPage.css';
+import Footer from '../Footer/Footer';
 
 function SupportPage() {
     return (
@@ -24,8 +25,8 @@ function SupportPage() {
                         <div><InstagramLogo width="3rem" height="3rem"/></div>
                     </div>
                 </div>
-              
             </div>
+            <Footer />
         </div>
     );
 };

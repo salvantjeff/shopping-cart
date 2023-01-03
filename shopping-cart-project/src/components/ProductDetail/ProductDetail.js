@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import allProducts from '../../data/availableProducts.json';
 import { useEffect, useState } from 'react';
 import emi from '../../img/emi.webp';
+import Footer from '../Footer/Footer';
 
 function ProductDetail({ handleAddToBag }) {
     const { id } = useParams();    
@@ -47,6 +48,7 @@ function ProductDetail({ handleAddToBag }) {
                     >Add to Bag</button>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
