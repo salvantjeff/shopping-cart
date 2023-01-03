@@ -1,0 +1,12 @@
+1. Hamburger menu should go away and present its contents for desktop
+2. Add image slider with more images to display on product detail page
+3. Persistent data -> local storage - don't want cart info gone on page reload
+4. Add continue shopping button on checkout page
+5. Fix cart page title and close button layout - it doest work well on mobile
+6. Fix image not scaling correctly when searching 
+7. Issue with contact page image taking too long to render
+8. Add slide out animation after clicking on menu page route item - its janky
+9. Fix image not scaling right on product detail page
+10. Add slide out animation when click on routes from search page
+11. Fix min height of product detail image (way too long) - on mobile
+12. When in mobile the cart page should take up more space - its way too small
