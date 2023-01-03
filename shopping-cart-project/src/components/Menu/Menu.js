@@ -34,7 +34,7 @@ function Menu() {
                     </div>
                 </div>
                 <ul className="menu-items">
-                    <Link onClick={handleMenuClicked} className='links' to="/">
+                    <Link onClick={handleMenuClicked} className='links' to="/shopping-cart">
                         <li className='menu-item'>Home</li>
                     </Link>
                     <Link onClick={handleMenuClicked} className='links' to="/shop">

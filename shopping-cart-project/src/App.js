@@ -92,7 +92,7 @@ function App() {
           <NavBar cartCount={cartCount}/>
           <div className='page-contents' style={{marginTop: `${navHeight}px`}}>
             <Routes>
-              <Route path='/' element={<HomePage />}/>
+              <Route path='/shopping-cart' element={<HomePage />}/>
               <Route path='/shop' element={<ShopPage />}/>
               <Route path='/shop/:id' element={<ProductDetail handleAddToBag={handleAddToBag} />}/>
               <Route path='/support' element={<SupportPage />}/>

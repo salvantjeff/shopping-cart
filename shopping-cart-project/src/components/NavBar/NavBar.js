@@ -22,7 +22,7 @@ function NavBar({ cartCount }) {
         <nav className='nav-section'>
             <ul className='nav-bar'>
                 <ul className='nav-links-desktop'>
-                    <Link className='links' to='/'>
+                    <Link className='links' to='/shopping-cart'>
                         <li>Home</li>
                     </Link>
                     <Link className='links' to='/shop'>
@@ -36,7 +36,7 @@ function NavBar({ cartCount }) {
                     <AiOutlineMenu />
                 </li>
                 
-                <Link className='links' to='/'>
+                <Link className='links' to='/shopping-cart'>
                     <li className='logo nav-button'>M</li>
                 </Link>
 
