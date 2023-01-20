@@ -11,3 +11,4 @@
 11. Fix min height of product detail image (way too long) - on mobile
 12. When in mobile the cart page should take up more space - its way too small
 13. Change react tab icon to some to Messi logo
+14. Add loading indicator for shop item images and support page image
