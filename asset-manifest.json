@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.e7cc2945.css",
+    "main.css": "/shopping-cart/static/css/main.41d4dcae.css",
     "main.js": "/shopping-cart/static/js/main.02da8a91.js",
     "static/media/support.jpg": "/shopping-cart/static/media/support.b0c1bf4363f6ecca41b1.jpg",
     "static/media/messi-world-cup.jpeg": "/shopping-cart/static/media/messi-world-cup.b21210defb57ec522551.jpeg",
@@ -10,11 +10,11 @@
     "static/media/Twitter.svg": "/shopping-cart/static/media/Twitter.4718ad039b064dfd895d8d1d3fdbda75.svg",
     "index.html": "/shopping-cart/index.html",
     "static/media/Facebook.svg": "/shopping-cart/static/media/Facebook.01df05873e695b0862f0978d5c897597.svg",
-    "main.e7cc2945.css.map": "/shopping-cart/static/css/main.e7cc2945.css.map",
+    "main.41d4dcae.css.map": "/shopping-cart/static/css/main.41d4dcae.css.map",
     "main.02da8a91.js.map": "/shopping-cart/static/js/main.02da8a91.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7cc2945.css",
+    "static/css/main.41d4dcae.css",
     "static/js/main.02da8a91.js"
   ]
 }
